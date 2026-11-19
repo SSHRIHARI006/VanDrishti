@@ -1,0 +1,2 @@
+Keeps models/species/ present so the docker-compose bind mount resolves to a real directory.
+Trained species bundles (*.joblib) are git-ignored; copy them here on the server.

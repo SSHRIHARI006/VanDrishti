@@ -37,3 +37,6 @@ deploy/space/build/
 # Google service-account keys
 animated-sign-*.json
 *-service-account*.json
+
+# Earth Engine service-account key (GEE_SERVICE_ACCOUNT_KEY)
+GEE-SERVICE_KEY.json

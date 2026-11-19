@@ -1,0 +1,72 @@
+# Van-drishti AI on a single VPS.
+#   1. cp .env.example .env   and fill in GEE_PROJECT (+ sign-in password, service-account key)
+#   2. docker compose up -d --build
+# See deploy/vps/README.md for the full walkthrough.
+
+name: vandrishti
+
+services:
+  app:
+    build:
+      context: .
+      args:
+        # 0 = satellite mode only (much smaller/faster image), 1 = also install DeepForest for drone surveys
+        INSTALL_DEEPFOREST: "${INSTALL_DEEPFOREST:-1}"
+    image: vandrishti-ai:latest
+    restart: unless-stopped
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      VANDRISHTI_DATA_DIR: /app/data
+    volumes:
+      # Jobs, events and cached Earth Engine rasters survive rebuilds.
+      - vandrishti_data:/app/data
+      # Drop-trained species models (*.joblib). Read-only: the app never writes models at runtime.
+      - ./models/species:/app/models/species:ro
+    expose:
+      - "8000"
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:8000/api/health', timeout=4).status == 200 else 1)
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 40s
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    depends_on:
+      app:
+        condition: service_healthy
+    environment:
+      # A domain (e.g. vandrishti.example.org) gets automatic Let's Encrypt HTTPS.
+      # Leave it unset to serve plain HTTP on port 80 while you test.
+      SITE_ADDRESS: "${SITE_ADDRESS:-:80}"
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./deploy/vps/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
+
+volumes:
+  vandrishti_data:
+  caddy_data:
+  caddy_config:

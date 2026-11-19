@@ -60,6 +60,20 @@ For frontend development, run `npm run dev` in `frontend/` (port 5173, proxies `
 
 Tests: `cd backend && pytest`.
 
+## Deploy on a VPS (Docker)
+
+The app ships as one image (backend + built dashboard) behind a Caddy reverse proxy:
+
+```bash
+cp .env.example .env      # GEE_PROJECT, GEE_SERVICE_ACCOUNT_KEY, VANDRISHTI_ADMIN_PASSWORD, SITE_ADDRESS
+docker compose up -d --build
+docker compose ps         # app becomes "healthy"
+```
+
+`SITE_ADDRESS` set to a domain gives automatic HTTPS; leave it unset for plain HTTP on port 80.
+Step-by-step server setup, Earth Engine service-account details, backups, log access and troubleshooting:
+[deploy/vps/README.md](deploy/vps/README.md).
+
 ## Repository layout
 
 ```
@@ -77,6 +91,9 @@ training/              Train a local species model from field-labelled trees
 validation/            IDTReeS benchmark validation
 samples/               Sample boundaries (Chandrapur) and sample surveys (NEON / IDTReeS)
 docs/                  SOP, drone data specification, architecture and deployment, methodology
+deploy/vps/            Docker deployment: Caddyfile and the VPS runbook
+docker-compose.yml     app + reverse proxy stack
+
 ```
 
 ## Documentation

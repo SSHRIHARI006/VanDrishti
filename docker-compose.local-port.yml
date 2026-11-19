@@ -1,0 +1,6 @@
+# Local-only override used to smoke-test the stack on a machine where host port 80
+# is already taken. Not part of the deployment; safe to delete.
+services:
+  caddy:
+    ports: !override
+      - "18080:80"

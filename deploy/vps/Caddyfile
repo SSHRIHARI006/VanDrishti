@@ -1,0 +1,19 @@
+# Reverse proxy in front of the vandrishti app container.
+# SITE_ADDRESS is set in docker-compose.yml: a bare domain gets automatic HTTPS,
+# ":80" serves plain HTTP (useful before DNS is pointed at the VPS).
+{$SITE_ADDRESS} {
+	encode zstd gzip
+
+	# Survey uploads: orthophoto + DSM + DTM + CHM, capped at 2 GB in total by the API.
+	request_body {
+		max_size 2GB
+	}
+
+	# Raster/tile downloads and long PDF/Shapefile exports take a while.
+	reverse_proxy app:8000 {
+		transport http {
+			read_timeout 600s
+			write_timeout 600s
+		}
+	}
+}
