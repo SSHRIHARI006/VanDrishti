@@ -1,0 +1,327 @@
+{
+  "date": "2026-09-24",
+  "plots": 393,
+  "iou_threshold": 0.4,
+  "detection": {
+    "DeepForest RGB, score \u2265 0.1 (survey mode)": {
+      "plots": 393,
+      "labelled_crowns": 1765,
+      "predictions": 5214,
+      "matched": 912,
+      "recall": 0.517,
+      "precision_lower_bound": 0.175,
+      "f1_lower_bound": 0.261,
+      "mean_iou_matched": 0.617,
+      "recall_by_site": {
+        "MLBS": 0.475,
+        "OSBS": 0.501,
+        "TALL": 0.745
+      }
+    },
+    "DeepForest RGB, score \u2265 0.2 (survey mode)": {
+      "plots": 393,
+      "labelled_crowns": 1765,
+      "predictions": 3588,
+      "matched": 870,
+      "recall": 0.493,
+      "precision_lower_bound": 0.242,
+      "f1_lower_bound": 0.325,
+      "mean_iou_matched": 0.62,
+      "recall_by_site": {
+        "MLBS": 0.452,
+        "OSBS": 0.472,
+        "TALL": 0.74
+      }
+    },
+    "DeepForest RGB, score \u2265 0.3 (survey mode)": {
+      "plots": 393,
+      "labelled_crowns": 1765,
+      "predictions": 2653,
+      "matched": 803,
+      "recall": 0.455,
+      "precision_lower_bound": 0.303,
+      "f1_lower_bound": 0.364,
+      "mean_iou_matched": 0.625,
+      "recall_by_site": {
+        "MLBS": 0.402,
+        "OSBS": 0.444,
+        "TALL": 0.709
+      }
+    },
+    "CHM watershed on LiDAR (survey CHM)": {
+      "plots": 393,
+      "labelled_crowns": 1765,
+      "predictions": 2782,
+      "matched": 605,
+      "recall": 0.343,
+      "precision_lower_bound": 0.217,
+      "f1_lower_bound": 0.266,
+      "mean_iou_matched": 0.561,
+      "recall_by_site": {
+        "MLBS": 0.268,
+        "OSBS": 0.373,
+        "TALL": 0.515
+      }
+    },
+    "CHM watershed on Meta 1 m (satellite mode)": {
+      "plots": 393,
+      "labelled_crowns": 1765,
+      "predictions": 1341,
+      "matched": 240,
+      "recall": 0.136,
+      "precision_lower_bound": 0.179,
+      "f1_lower_bound": 0.155,
+      "mean_iou_matched": 0.546,
+      "recall_by_site": {
+        "MLBS": 0.09,
+        "OSBS": 0.166,
+        "TALL": 0.199
+      }
+    }
+  },
+  "height": {
+    "LiDAR CHM (survey)": {
+      "n": 1057,
+      "mae_m": 2.7,
+      "rmse_m": 4.12,
+      "bias_m": 1.93,
+      "r2": 0.444
+    },
+    "Meta 1 m CHM (satellite)": {
+      "n": 1057,
+      "mae_m": 4.89,
+      "rmse_m": 6.2,
+      "bias_m": -3.24,
+      "r2": -0.258
+    }
+  },
+  "species": {
+    "RGB + height (drone-equivalent)": {
+      "samples": 1109,
+      "classes": 12,
+      "accuracy": 0.41,
+      "macro_f1": 0.255,
+      "weighted_f1": 0.41,
+      "per_class": {
+        "ACRU": {
+          "precision": 0.328,
+          "recall": 0.287,
+          "f1": 0.306,
+          "support": 143
+        },
+        "AMLA": {
+          "precision": 0.092,
+          "recall": 0.17,
+          "f1": 0.119,
+          "support": 47
+        },
+        "LITU": {
+          "precision": 0.154,
+          "recall": 0.118,
+          "f1": 0.133,
+          "support": 17
+        },
+        "MAGNO": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 15
+        },
+        "NYSY": {
+          "precision": 0.181,
+          "recall": 0.319,
+          "f1": 0.231,
+          "support": 47
+        },
+        "Other": {
+          "precision": 0.238,
+          "recall": 0.158,
+          "f1": 0.19,
+          "support": 95
+        },
+        "PIPA2": {
+          "precision": 0.778,
+          "recall": 0.776,
+          "f1": 0.777,
+          "support": 312
+        },
+        "QUAL": {
+          "precision": 0.245,
+          "recall": 0.226,
+          "f1": 0.235,
+          "support": 106
+        },
+        "QUCO2": {
+          "precision": 0.149,
+          "recall": 0.186,
+          "f1": 0.165,
+          "support": 59
+        },
+        "QUGE2": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 18
+        },
+        "QULA2": {
+          "precision": 0.52,
+          "recall": 0.703,
+          "f1": 0.598,
+          "support": 74
+        },
+        "QURU": {
+          "precision": 0.372,
+          "recall": 0.256,
+          "f1": 0.303,
+          "support": 176
+        }
+      },
+      "unknown_threshold": [
+        {
+          "threshold": 0.0,
+          "coverage": 1.0,
+          "accuracy_on_assigned": 0.41
+        },
+        {
+          "threshold": 0.3,
+          "coverage": 0.701,
+          "accuracy_on_assigned": 0.507
+        },
+        {
+          "threshold": 0.4,
+          "coverage": 0.456,
+          "accuracy_on_assigned": 0.579
+        },
+        {
+          "threshold": 0.5,
+          "coverage": 0.301,
+          "accuracy_on_assigned": 0.68
+        },
+        {
+          "threshold": 0.6,
+          "coverage": 0.208,
+          "accuracy_on_assigned": 0.766
+        },
+        {
+          "threshold": 0.7,
+          "coverage": 0.13,
+          "accuracy_on_assigned": 0.785
+        }
+      ]
+    },
+    "RGB + height + hyperspectral (PCA 20)": {
+      "samples": 1109,
+      "classes": 12,
+      "accuracy": 0.532,
+      "macro_f1": 0.41,
+      "weighted_f1": 0.53,
+      "per_class": {
+        "ACRU": {
+          "precision": 0.469,
+          "recall": 0.42,
+          "f1": 0.443,
+          "support": 143
+        },
+        "AMLA": {
+          "precision": 0.157,
+          "recall": 0.234,
+          "f1": 0.188,
+          "support": 47
+        },
+        "LITU": {
+          "precision": 0.591,
+          "recall": 0.765,
+          "f1": 0.667,
+          "support": 17
+        },
+        "MAGNO": {
+          "precision": 0.172,
+          "recall": 0.333,
+          "f1": 0.227,
+          "support": 15
+        },
+        "NYSY": {
+          "precision": 0.194,
+          "recall": 0.298,
+          "f1": 0.235,
+          "support": 47
+        },
+        "Other": {
+          "precision": 0.328,
+          "recall": 0.2,
+          "f1": 0.248,
+          "support": 95
+        },
+        "PIPA2": {
+          "precision": 0.856,
+          "recall": 0.894,
+          "f1": 0.875,
+          "support": 312
+        },
+        "QUAL": {
+          "precision": 0.51,
+          "recall": 0.491,
+          "f1": 0.5,
+          "support": 106
+        },
+        "QUCO2": {
+          "precision": 0.18,
+          "recall": 0.186,
+          "f1": 0.183,
+          "support": 59
+        },
+        "QUGE2": {
+          "precision": 0.75,
+          "recall": 0.167,
+          "f1": 0.273,
+          "support": 18
+        },
+        "QULA2": {
+          "precision": 0.586,
+          "recall": 0.689,
+          "f1": 0.634,
+          "support": 74
+        },
+        "QURU": {
+          "precision": 0.48,
+          "recall": 0.409,
+          "f1": 0.442,
+          "support": 176
+        }
+      },
+      "unknown_threshold": [
+        {
+          "threshold": 0.0,
+          "coverage": 1.0,
+          "accuracy_on_assigned": 0.532
+        },
+        {
+          "threshold": 0.3,
+          "coverage": 0.547,
+          "accuracy_on_assigned": 0.697
+        },
+        {
+          "threshold": 0.4,
+          "coverage": 0.349,
+          "accuracy_on_assigned": 0.819
+        },
+        {
+          "threshold": 0.5,
+          "coverage": 0.197,
+          "accuracy_on_assigned": 0.89
+        },
+        {
+          "threshold": 0.6,
+          "coverage": 0.097,
+          "accuracy_on_assigned": 0.898
+        },
+        {
+          "threshold": 0.7,
+          "coverage": 0.033,
+          "accuracy_on_assigned": 0.946
+        }
+      ]
+    }
+  },
+  "species_model": "models\\species\\idtrees_neon_osbs_mlbs.joblib"
+}

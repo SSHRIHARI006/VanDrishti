@@ -1,0 +1,5 @@
+{
+  "name": "IDTReeS plot with LiDAR heights",
+  "description": "10 cm aerial RGB + LiDAR canopy height model, Ordway-Swisher (Florida). Same inputs a drone survey produces.",
+  "attribution": "NEON / IDTReeS 2020 benchmark (test split)"
+}

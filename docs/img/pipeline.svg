@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 330" font-family="Segoe UI, Inter, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5d6b62"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="330" fill="#ffffff"/>
+
+  <!-- input -->
+  <rect x="20" y="130" width="130" height="70" rx="10" fill="#1f5f3a"/>
+  <text x="85" y="160" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">KML / KMZ</text>
+  <text x="85" y="180" fill="#cfe6d5" font-size="12" text-anchor="middle">block boundary</text>
+
+  <!-- data sources -->
+  <rect x="200" y="40" width="210" height="100" rx="10" fill="#e7f1e9" stroke="#2f7d4c"/>
+  <text x="305" y="64" fill="#1f5f3a" font-size="14" font-weight="700" text-anchor="middle">Satellite mode</text>
+  <text x="305" y="86" fill="#1b2a21" font-size="12" text-anchor="middle">Meta 1 m canopy height</text>
+  <text x="305" y="104" fill="#1b2a21" font-size="12" text-anchor="middle">Sentinel-2 · Copernicus DEM</text>
+  <text x="305" y="122" fill="#1b2a21" font-size="12" text-anchor="middle">ESA WorldCover (Earth Engine)</text>
+
+  <rect x="200" y="190" width="210" height="100" rx="10" fill="#e8f0fd" stroke="#2d6cdf"/>
+  <text x="305" y="214" fill="#1f4a99" font-size="14" font-weight="700" text-anchor="middle">Drone survey mode</text>
+  <text x="305" y="236" fill="#1b2a21" font-size="12" text-anchor="middle">Orthophoto (2–30 cm)</text>
+  <text x="305" y="254" fill="#1b2a21" font-size="12" text-anchor="middle">DSM − DTM → canopy height</text>
+  <text x="305" y="272" fill="#1b2a21" font-size="12" text-anchor="middle">Field-labelled species plots</text>
+
+  <!-- processing -->
+  <rect x="460" y="40" width="250" height="250" rx="10" fill="#fafcfa" stroke="#dde5de"/>
+  <text x="585" y="66" fill="#1b2a21" font-size="14" font-weight="700" text-anchor="middle">AI / GIS processing</text>
+  <g font-size="12" fill="#1b2a21">
+    <text x="480" y="96">1  Tree detection (CHM / DeepForest)</text>
+    <text x="480" y="122">2  Height per crown (CHM p95)</text>
+    <text x="480" y="148">3  Species (local model, Unknown)</text>
+    <text x="480" y="174">4  Canopy density, FSI classes</text>
+    <text x="480" y="200">5  NDVI, land cover, terrain</text>
+    <text x="480" y="226">6  Quality checks, rare events</text>
+    <text x="480" y="252">7  Confidence per output</text>
+  </g>
+
+  <!-- outputs -->
+  <rect x="760" y="40" width="220" height="250" rx="10" fill="#1f5f3a"/>
+  <text x="870" y="66" fill="#fff" font-size="14" font-weight="700" text-anchor="middle">Outputs</text>
+  <g font-size="12" fill="#e7f1e9">
+    <text x="780" y="96">Tree inventory: ID, lat/long,</text>
+    <text x="780" y="113">species, height, crown, density</text>
+    <text x="780" y="140">Interactive 2D / 3D map</text>
+    <text x="780" y="167">PDF assessment report</text>
+    <text x="780" y="194">CSV · KMZ · Shapefile · GeoJSON</text>
+    <text x="780" y="221">Canopy height GeoTIFF</text>
+    <text x="780" y="248">Step-by-step event log</text>
+  </g>
+
+  <g stroke="#5d6b62" stroke-width="2" fill="none" marker-end="url(#a)">
+    <path d="M150,155 C175,155 175,90 198,90"/>
+    <path d="M150,175 C175,175 175,240 198,240"/>
+    <path d="M410,90 L458,120"/>
+    <path d="M410,240 L458,210"/>
+    <path d="M710,165 L758,165"/>
+  </g>
+</svg>

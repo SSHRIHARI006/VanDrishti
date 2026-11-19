@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>NEON OSBS plot 029 (sample survey)</name>
+<description>Sample 10 cm aerial RGB plot from NEON (Ordway-Swisher, Florida), shipped with DeepForest. Stands in for a drone orthophoto.</description>
+<Placemark><name>Plot 029</name><Polygon><outerBoundaryIs><LinearRing><coordinates>-81.9900846,29.6923318,0 -81.9896971,29.6923347,0 -81.9897004,29.6926731,0 -81.9900880,29.6926702,0 -81.9900846,29.6923318,0</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Document></kml>

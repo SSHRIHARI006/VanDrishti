@@ -1,0 +1,5 @@
+{
+  "name": "NEON plot, imagery only",
+  "description": "10 cm aerial RGB without height data: shows the satellite-height fallback and its warnings.",
+  "attribution": "NEON sample tile shipped with DeepForest"
+}

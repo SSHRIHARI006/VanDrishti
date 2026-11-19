@@ -1,0 +1,97 @@
+{
+  "date": "2026-09-24",
+  "plots": 529,
+  "canopy_threshold_m": 5.0,
+  "reference": "NEON airborne LiDAR canopy height model (IDTReeS)",
+  "satellite": "Meta/WRI Global Canopy Height 1 m (as used by satellite mode)",
+  "canopy_cover_pct": {
+    "mae": 9.64,
+    "rmse": 15.75,
+    "bias": -5.79,
+    "r": 0.919
+  },
+  "canopy_height_p95_m": {
+    "mae": 5.06,
+    "rmse": 6.19,
+    "bias": -4.61,
+    "r": 0.777
+  },
+  "fsi_class_agreement": 0.767,
+  "fsi_class_within_one": 0.97,
+  "fsi_confusion_lidar_rows_satellite_cols": {
+    "VDF": {
+      "VDF": 306,
+      "MDF": 23,
+      "OF": 6,
+      "NF": 2
+    },
+    "MDF": {
+      "VDF": 15,
+      "MDF": 42,
+      "OF": 53,
+      "NF": 8
+    },
+    "OF": {
+      "VDF": 0,
+      "MDF": 3,
+      "OF": 54,
+      "NF": 13
+    },
+    "NF": {
+      "VDF": 0,
+      "MDF": 0,
+      "OF": 0,
+      "NF": 4
+    }
+  },
+  "by_site": {
+    "MLBS": {
+      "plots": 56,
+      "cover": {
+        "mae": 2.29,
+        "rmse": 13.44,
+        "bias": -1.28,
+        "r": -0.048
+      },
+      "height_p95": {
+        "mae": 5.55,
+        "rmse": 6.49,
+        "bias": -5.37,
+        "r": 0.618
+      },
+      "class_agreement": 0.982
+    },
+    "OSBS": {
+      "plots": 321,
+      "cover": {
+        "mae": 14.02,
+        "rmse": 18.96,
+        "bias": -10.43,
+        "r": 0.887
+      },
+      "height_p95": {
+        "mae": 3.59,
+        "rmse": 4.34,
+        "bias": -2.93,
+        "r": 0.766
+      },
+      "class_agreement": 0.636
+    },
+    "TALL": {
+      "plots": 152,
+      "cover": {
+        "mae": 3.09,
+        "rmse": 6.12,
+        "bias": 2.35,
+        "r": 0.722
+      },
+      "height_p95": {
+        "mae": 8.0,
+        "rmse": 8.83,
+        "bias": -7.89,
+        "r": 0.539
+      },
+      "class_agreement": 0.967
+    }
+  }
+}

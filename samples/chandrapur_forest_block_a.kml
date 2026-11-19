@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Chandrapur Forest Block A (sample)</name>
+    <description>Sample assessment boundary near Chandrapur, Maharashtra. Dense forest, about 1 km².</description>
+    <Placemark>
+      <name>Block A boundary</name>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              79.3750,20.0450,0 79.3845,20.0445,0 79.3860,20.0500,0 79.3850,20.0548,0
+              79.3790,20.0555,0 79.3745,20.0520,0 79.3750,20.0450,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+  </Document>
+</kml>

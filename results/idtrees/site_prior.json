@@ -1,0 +1,179 @@
+{
+  "samples": 1109,
+  "classes": [
+    "ACRU",
+    "AMLA",
+    "LITU",
+    "MAGNO",
+    "NYSY",
+    "Other",
+    "PIPA2",
+    "QUAL",
+    "QUCO2",
+    "QUGE2",
+    "QULA2",
+    "QURU"
+  ],
+  "sites": {
+    "MLBS": {
+      "ecoregion": "Appalachian-Blue Ridge forests",
+      "lonlat": [
+        -80.5276,
+        37.383
+      ],
+      "prior": {
+        "ACRU": 0.137,
+        "AMLA": 0.291,
+        "LITU": 0.077,
+        "MAGNO": 0.078,
+        "NYSY": 0.049,
+        "Other": 0.083,
+        "PIPA2": 0.0,
+        "QUAL": 0.052,
+        "QUCO2": 0.136,
+        "QUGE2": 0.0,
+        "QULA2": 0.0,
+        "QURU": 0.096
+      },
+      "top_species": [
+        [
+          "Amelanchier laevis",
+          27.1
+        ],
+        [
+          "Quercus coccinea",
+          13.6
+        ],
+        [
+          "Acer rubrum",
+          13.2
+        ],
+        [
+          "Pyrus pyrifolia",
+          7.8
+        ],
+        [
+          "Quercus rubra",
+          7.5
+        ],
+        [
+          "Liriodendron tulipifera",
+          6.8
+        ],
+        [
+          "Magnolia",
+          4.9
+        ],
+        [
+          "Nyssa sylvatica",
+          4.6
+        ]
+      ]
+    },
+    "OSBS": {
+      "ecoregion": "Southeast US conifer savannas",
+      "lonlat": [
+        -81.9882,
+        29.6908
+      ],
+      "prior": {
+        "ACRU": 0.155,
+        "AMLA": 0.0,
+        "LITU": 0.002,
+        "MAGNO": 0.082,
+        "NYSY": 0.0,
+        "Other": 0.083,
+        "PIPA2": 0.213,
+        "QUAL": 0.0,
+        "QUCO2": 0.0,
+        "QUGE2": 0.231,
+        "QULA2": 0.234,
+        "QURU": 0.0
+      },
+      "top_species": [
+        [
+          "Quercus laevis",
+          10.9
+        ],
+        [
+          "Pinus palustris",
+          10.3
+        ],
+        [
+          "Quercus geminata",
+          9.6
+        ],
+        [
+          "Acalypha wilkesiana",
+          8.1
+        ],
+        [
+          "Moringa oleifera",
+          5.6
+        ],
+        [
+          "Acer rubrum",
+          5.2
+        ],
+        [
+          "Broussonetia papyrifera",
+          4.9
+        ],
+        [
+          "Calliandra haematocephala",
+          4.3
+        ]
+      ]
+    }
+  },
+  "runs": {
+    "Image only (RF)": {
+      "accuracy": 0.41,
+      "macro_f1": 0.255,
+      "assigned_share": 0.301,
+      "accuracy_on_assigned": 0.68,
+      "composition_error_pp": 39.1,
+      "composition_error_em_pp": 47.4
+    },
+    "Image + site prior (tau 0.25)": {
+      "accuracy": 0.411,
+      "macro_f1": 0.259,
+      "assigned_share": 0.318,
+      "accuracy_on_assigned": 0.683,
+      "composition_error_pp": null
+    },
+    "Image + site prior (tau 0.5)": {
+      "accuracy": 0.404,
+      "macro_f1": 0.25,
+      "assigned_share": 0.344,
+      "accuracy_on_assigned": 0.68,
+      "composition_error_pp": 43.7
+    },
+    "Image + site prior (tau 1.0)": {
+      "accuracy": 0.391,
+      "macro_f1": 0.228,
+      "assigned_share": 0.42,
+      "accuracy_on_assigned": 0.609,
+      "composition_error_pp": null
+    },
+    "Image + presence gate (site prior)": {
+      "accuracy": 0.421,
+      "macro_f1": 0.265,
+      "assigned_share": 0.351,
+      "accuracy_on_assigned": 0.681,
+      "composition_error_pp": null
+    },
+    "Image + presence gate (oracle site list)": {
+      "accuracy": 0.426,
+      "macro_f1": 0.267,
+      "assigned_share": 0.359,
+      "accuracy_on_assigned": 0.686,
+      "composition_error_pp": null
+    }
+  },
+  "errors": {
+    "image_only_errors": 654,
+    "cross_site_errors": 48,
+    "cross_site_share_of_errors": 0.073
+  }
+}
